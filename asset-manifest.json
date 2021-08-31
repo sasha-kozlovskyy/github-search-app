@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.294ee95f.chunk.css",
-    "main.js": "/static/js/main.88c0e377.chunk.js",
-    "main.js.map": "/static/js/main.88c0e377.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.e1a01050.js",
-    "runtime-main.js.map": "/static/js/runtime-main.e1a01050.js.map",
-    "static/js/2.4faf69a1.chunk.js": "/static/js/2.4faf69a1.chunk.js",
-    "static/js/2.4faf69a1.chunk.js.map": "/static/js/2.4faf69a1.chunk.js.map",
-    "static/js/3.9968f226.chunk.js": "/static/js/3.9968f226.chunk.js",
-    "static/js/3.9968f226.chunk.js.map": "/static/js/3.9968f226.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.294ee95f.chunk.css.map": "/static/css/main.294ee95f.chunk.css.map",
-    "static/js/2.4faf69a1.chunk.js.LICENSE.txt": "/static/js/2.4faf69a1.chunk.js.LICENSE.txt"
+    "main.css": "/sasha-kozlovskyy/github-search-app/static/css/main.294ee95f.chunk.css",
+    "main.js": "/sasha-kozlovskyy/github-search-app/static/js/main.a0b0b96e.chunk.js",
+    "main.js.map": "/sasha-kozlovskyy/github-search-app/static/js/main.a0b0b96e.chunk.js.map",
+    "runtime-main.js": "/sasha-kozlovskyy/github-search-app/static/js/runtime-main.74dca486.js",
+    "runtime-main.js.map": "/sasha-kozlovskyy/github-search-app/static/js/runtime-main.74dca486.js.map",
+    "static/js/2.4faf69a1.chunk.js": "/sasha-kozlovskyy/github-search-app/static/js/2.4faf69a1.chunk.js",
+    "static/js/2.4faf69a1.chunk.js.map": "/sasha-kozlovskyy/github-search-app/static/js/2.4faf69a1.chunk.js.map",
+    "static/js/3.9968f226.chunk.js": "/sasha-kozlovskyy/github-search-app/static/js/3.9968f226.chunk.js",
+    "static/js/3.9968f226.chunk.js.map": "/sasha-kozlovskyy/github-search-app/static/js/3.9968f226.chunk.js.map",
+    "index.html": "/sasha-kozlovskyy/github-search-app/index.html",
+    "static/css/main.294ee95f.chunk.css.map": "/sasha-kozlovskyy/github-search-app/static/css/main.294ee95f.chunk.css.map",
+    "static/js/2.4faf69a1.chunk.js.LICENSE.txt": "/sasha-kozlovskyy/github-search-app/static/js/2.4faf69a1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.e1a01050.js",
+    "static/js/runtime-main.74dca486.js",
     "static/js/2.4faf69a1.chunk.js",
     "static/css/main.294ee95f.chunk.css",
-    "static/js/main.88c0e377.chunk.js"
+    "static/js/main.a0b0b96e.chunk.js"
   ]
 }
