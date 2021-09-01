@@ -24,7 +24,10 @@ export const UserDetails = ({
   }, [userLogin]);
 
   if (!repos.length) {
-    return null;
+    return <div class="d-flex align-items-center">
+    <strong>Loading...</strong>
+    <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+  </div>;
   }
 
     return (
