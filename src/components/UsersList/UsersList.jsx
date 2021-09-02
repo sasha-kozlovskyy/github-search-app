@@ -51,12 +51,12 @@ export const UsersList = ({
         aria-label="Recipient's username"
         aria-describedby="basic-addon2"
       />
-        {(!error) && (
-      <div className="alert" role="alert">
+        {(!error)
+      ? <div className="alert" role="alert">
         <h1>{userError}</h1>
       </div>
-        )}
-      <div class="row">
+
+      : <div class="row">
         <div class="col-sm-12">
           {queryUser.length > 0
             ? <div class="card mb-3">
@@ -99,6 +99,7 @@ export const UsersList = ({
  
         </div>
       </div>
+}
     </>
   );
 };

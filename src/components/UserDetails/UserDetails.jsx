@@ -7,23 +7,33 @@ export const UserDetails = ({
   userLogin,
   isUserSelected,
   hideUserDetails,
+  loading,
+  setLoading
 }) => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({});
   const [repos, setRepos] = useState([]);
 
   useEffect(() => {
     const loadUser = async() => {
-      const loadedUser = await request(`/users/${userLogin}`);
+      try {
+        const loadedUser = await request(`/users/${userLogin}`);
+        setUser(loadedUser);
+      } catch {
+
+      } finally {
+        setLoading(false);
+      }
+
       const loadedRepos = await request(`/users/${userLogin}/repos`);
-      setUser(loadedUser);
+
       setRepos(loadedRepos);
 
     };
 
     loadUser();
-  }, [userLogin]);
+  }, [userLogin, setLoading]);
 
-  if (!repos.length) {
+  if (loading) {
     return <div class="d-flex align-items-center">
     <strong>Loading...</strong>
     <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>

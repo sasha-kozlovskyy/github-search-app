@@ -8,6 +8,7 @@ const App = () => {
   const [users, setUsers] = useState([]);
   const [userLogin, setUserLogin] = useState('');
   const [isUserSelected, setUserSelected] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const getUsers = async() => {
@@ -20,6 +21,7 @@ const App = () => {
   const selectUser = (userLogin) => {
     setUserLogin(userLogin);
     setUserSelected(true);
+    setLoading(true);
   };
 
   const hideUserDetails = () => {
@@ -56,6 +58,8 @@ const App = () => {
                   userLogin={userLogin}
                   isUserSelected={isUserSelected}
                   hideUserDetails={hideUserDetails}
+                  setLoading={setLoading}
+                  loading={loading}
                 />
               )}
           </div>
