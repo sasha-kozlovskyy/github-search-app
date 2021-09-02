@@ -42,6 +42,7 @@ const App = () => {
             : (
               <UsersList
                 users={users}
+                setUsers={setUsers}
                 selectUser={selectUser}
                 hideUserDetails={hideUserDetails}
               />
