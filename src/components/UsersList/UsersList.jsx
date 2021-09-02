@@ -5,15 +5,15 @@ import { RepoCount } from '../RepoCount';
 import "./UsersList.css";
 
 export const UsersList = ({
-  users,
+  // users,
   selectUser,
   hideUserDetails,
 }) => {
   const [queryUser, setInputUser] = useState('');
-  const [user, setUser] = useState({});
+  const [users, setUser] = useState([]);
   const [userError, setUserError] = useState(null);
   const [error, setError] = useState(true);
-  const filteredUsers = users.filter(user => user.login.includes(queryUser));
+  // const filteredUsers = users.filter(user => user.login.includes(queryUser));
   const handleQueryUser = (event) => {
     setInputUser(event.target.value);
     hideUserDetails();
@@ -23,14 +23,14 @@ export const UsersList = ({
     if (queryUser.length > 0) {
       const loadUser = async() => {
         try {
-          const loadedUser = await request(`/users/${queryUser}`);
+          const loadedUser = await request(`/search/users?q=${queryUser}`);
           setUser(loadedUser);
           setError(true);
         }
         catch (errorUser) {
           setUserError(`Loading error: User is not found`);
           setError(false);
-        } 
+        }
 
       };
   
@@ -58,7 +58,7 @@ export const UsersList = ({
 
       : <div class="row">
         <div class="col-sm-12">
-          {queryUser.length > 0
+          {/* {queryUser.length > 0
             ? <div class="card mb-3">
             <div class="row g-0">
               <div class="col-md-3">
@@ -75,8 +75,8 @@ export const UsersList = ({
               </div>
             </div>
           </div>
-            : <div>
-              {filteredUsers.map(user => (
+            : <div> */}
+              {users.map(user => (
                 <div class="card mb-3">
                   <div class="row g-0">
                     <div class="col-md-3">
@@ -94,8 +94,8 @@ export const UsersList = ({
                   </div>
                 </div>
               ))}
-            </div>
-          }
+            {/* </div>
+          } */}
  
         </div>
       </div>

@@ -1,13 +1,18 @@
 
 const BASE_URL = 'https://api.github.com';
 
-export const request = endpoint => fetch(`${BASE_URL}${endpoint}?client_id="a49cb601e34f95eb52e7"&client_secret="8a3bc2aeb4b46b8dfe22bee291bd1d4ca7f5ebf2"`, {
-    method: 'GET',
-    })
-  .then((response) => {
+export const request = async(url) => {
+    const response = await fetch(`${BASE_URL}${url}`, {
+      method: 'GET',
+
+    });
+
     if (!response.ok) {
-      throw new Error(`${response.status} - ${response.statusText}`);
+      throw new Error(response.statusText);
     }
 
-    return response.json();
-  });
+    const serverResponse = await response.json();
+
+    return serverResponse.items || serverResponse;
+
+};
