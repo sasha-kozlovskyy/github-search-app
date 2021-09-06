@@ -5,7 +5,6 @@ import { RepoCount } from '../RepoCount';
 import "./UsersList.css";
 
 export const UsersList = ({
-  // users,
   selectUser,
   hideUserDetails,
 }) => {
@@ -13,7 +12,6 @@ export const UsersList = ({
   const [users, setUser] = useState([]);
   const [userError, setUserError] = useState(null);
   const [error, setError] = useState(true);
-  // const filteredUsers = users.filter(user => user.login.includes(queryUser));
   const handleQueryUser = (event) => {
     setInputUser(event.target.value);
     hideUserDetails();
@@ -58,24 +56,6 @@ export const UsersList = ({
 
       : <div className="row">
         <div className="col-sm-12">
-          {/* {queryUser.length > 0
-            ? <div class="card mb-3">
-            <div class="row g-0">
-              <div class="col-md-3">
-                <img src={user.avatar_url} class="img-fluid rounded-start" alt="avatar"></img>
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">{user.login}</h5>
-                    <p class="card-text">
-                    Repos: {user.public_repos}
-                    </p>
-                    <button class="btn btn-primary" onClick={() => selectUser(user.login)}>Details</button>
-                </div>
-              </div>
-            </div>
-          </div>
-            : <div> */}
               {users.map(user => (
                 <div className="card mb-3" key={user.login}>
                   <div className="row g-0">
@@ -94,9 +74,6 @@ export const UsersList = ({
                   </div>
                 </div>
               ))}
-            {/* </div>
-          } */}
- 
         </div>
       </div>
 }

@@ -5,8 +5,6 @@ import { UserDetails } from './components/UserDetails/UserDetails';
 import { UsersList } from './components/UsersList/UsersList';
 require('dotenv').config();
 
-console.log(process.env);
-
 const App = () => {
   const [users, setUsers] = useState([]);
   const [userLogin, setUserLogin] = useState('');
@@ -36,7 +34,9 @@ const App = () => {
     <div className="app container">
       <div className="row">
         <div className="col">
-          <h1>Users list</h1>
+          <h1>
+            Users list
+          </h1>
           {!users.length
             ? (
               <div className="d-flex align-items-center">
