@@ -3,6 +3,9 @@ import { request } from './components/api';
 import './App.css';
 import { UserDetails } from './components/UserDetails/UserDetails';
 import { UsersList } from './components/UsersList/UsersList';
+require('dotenv').config();
+
+console.log(process.env);
 
 const App = () => {
   const [users, setUsers] = useState([]);
@@ -36,9 +39,9 @@ const App = () => {
           <h1>Users list</h1>
           {!users.length
             ? (
-              <div class="d-flex align-items-center">
+              <div className="d-flex align-items-center">
                 <strong>Loading...</strong>
-                <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                <div className="spinner-border ms-auto" role="status" aria-hidden="true"></div>
               </div>
             )
             : (

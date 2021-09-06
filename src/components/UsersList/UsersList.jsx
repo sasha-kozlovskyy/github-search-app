@@ -56,8 +56,8 @@ export const UsersList = ({
         <h1>{userError}</h1>
       </div>
 
-      : <div class="row">
-        <div class="col-sm-12">
+      : <div className="row">
+        <div className="col-sm-12">
           {/* {queryUser.length > 0
             ? <div class="card mb-3">
             <div class="row g-0">
@@ -77,18 +77,18 @@ export const UsersList = ({
           </div>
             : <div> */}
               {users.map(user => (
-                <div class="card mb-3">
-                  <div class="row g-0">
-                    <div class="col-md-3">
+                <div className="card mb-3" key={user.login}>
+                  <div className="row g-0">
+                    <div className="col-md-3">
                       <img src={user.avatar_url} class="img-fluid rounded-start" alt="avatar"></img>
                     </div>
-                    <div class="col-md-8">
-                      <div class="card-body">
-                        <h5 class="card-title">{user.login}</h5>
-                          <p class="card-text">
+                    <div className="col-md-8">
+                      <div className="card-body">
+                        <h5 className="card-title">{user.login}</h5>
+                          <p className="card-text">
                             <RepoCount name={user.login} />
                           </p>
-                          <button class="btn btn-primary" onClick={() => selectUser(user.login)}>Details</button>
+                          <button className="btn btn-primary" onClick={() => selectUser(user.login)}>Details</button>
                       </div>
                     </div>
                   </div>

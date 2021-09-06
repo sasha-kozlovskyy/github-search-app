@@ -34,9 +34,9 @@ export const UserDetails = ({
   }, [userLogin, setLoading]);
 
   if (loading) {
-    return <div class="d-flex align-items-center">
+    return <div className="d-flex align-items-center">
     <strong>Loading...</strong>
-    <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+    <div className="spinner-border ms-auto" role="status" aria-hidden="true"></div>
   </div>;
   }
 
